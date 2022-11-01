@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginui/abc.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class _MyLoginState extends State<MyLogin> {
             Container(),
             Container(
               padding: EdgeInsets.only(left: 35, top: 130),
-              child: Text(
+              child: Text('Roboinfocom\n'
                 'Welcome\nBack',
                 style: TextStyle(color: Colors.white, fontSize: 33),
               ),
@@ -78,7 +79,9 @@ class _MyLoginState extends State<MyLogin> {
                                 backgroundColor: Color(0xff4c505b),
                                 child: IconButton(
                                     color: Colors.white,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+                                    },
                                     icon: Icon(
                                       Icons.arrow_forward,
                                     )),
